@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moja prva stranica – LEGO klub</title>
+
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      color: #222;
+    }
+
+    /* Glavni okvir stranice */
+    .page {
+      width: min(900px, 95%);
+      margin: 20px auto;
+    }
+
+    header {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    /* Banner */
+    .banner img {
+      width: 100%;
+      display: block;
+      border-bottom: 4px solid #ffcc00;
+    }
+
+    /* Navigacija */
+    nav {
+      background: #333;
+      margin-top: 10px;
+      padding: 8px;
+      text-align: center;
+    }
+
+    nav ul { list-style: none; }
+
+    nav li {
+      display: inline-block;
+      margin: 0 6px;
+    }
+
+    nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: #fff;
+      border: 1px solid #fff;
+      padding: 4px 12px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    /* Main sadržaj */
+    main {
+      background: #fff;
+      border: 1px solid #ccc;
+      margin-top: 15px;
+      padding: 12px;
+    }
+
+    .highlight {
+      background: #fff6c9;           /* svijetlo žuto kao na primjeru */
+      border: 1px solid #e9d98a;
+      padding: 12px;
+      margin-bottom: 12px;
+    }
+
+    .highlight h2 {
+      color: #0b47ff;
+      font-size: 18px;
+      margin-bottom: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .highlight p {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .content p {
+      line-height: 1.6;
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+
+    .content h3 {
+      margin: 8px 0 8px 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      margin: 12px 0 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="banner">
+        <!-- Stavi sliku u isti folder i nazovi je lego_banner.jpg -->
+        <img src="lego_banner.jpg" alt="LEGO banner">
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Početna</a></li>
+          <li><a href="#">O nama</a></li>
+          <li><a href="#">Radionice</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="highlight">
+        <h2>LEGO KLUB ZAGREB</h2>
+        <p>Mjesto gdje se mašta i kockice spajaju u nezaboravne projekte.</p>
+      </div>
+
+      <div class="content">
+        <p><strong>LEGO klub Zagreb</strong> okuplja studente koji vole slagati modele, smišljati priče i učiti kroz igru.
+          Cilj kluba je razvijati maštu i logičko razmišljanje.</p>
+
+        <h3>O klubu</h3>
+        <p>U klubu se redovito organiziraju druženja, tematske radionice i mini natjecanja. Članovi rade samostalno ili u timovima,
+          a radovi se povremeno izlažu na školskim događanjima.</p>
+
+        <h3>Radionice</h3>
+        <p>Radionice su prilagođene početnicima i naprednima. Uči se planiranje, izrada konstrukcija i prezentacija ideje
+          (što si i vidio na vježbi: struktura + stil = uredan rezultat).</p>
+      </div>
+    </main>
+
+    <footer>
+      &copy; Dominik Perisa
+    </footer>
+  </div>
+</body>
+</html>
