@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LEGO klub – Kontakt</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="banner">
+        <img src="lego_banner.jpg" alt="LEGO banner">
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="#">O nama</a></li>
+          <li><a href="#">Radionice</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2 class="form-title">Kontaktirajte nas – LEGO podrška</h2>
+      <p class="form-desc">
+        Ako imate pitanje o LEGO setu, ispunite kontakt obrazac u nastavku.
+      </p>
+
+      <form>
+        <div class="form-grid">
+          <div>
+            <label for="ime">Ime</label>
+            <input id="ime" type="text" placeholder="Vaše ime..." required>
+          </div>
+
+          <div>
+            <label for="prezime">Prezime</label>
+            <input id="prezime" type="text" placeholder="Vaše prezime..." required>
+          </div>
+
+          <div>
+            <label for="email">Vaš e-mail</label>
+            <input id="email" type="email" placeholder="Vaš e-mail..." required>
+          </div>
+
+          <div>
+            <label for="drzava">Država</label>
+            <select id="drzava">
+              <option>Hrvatska</option>
+              <option>Slovenija</option>
+              <option>Bosna i Hercegovina</option>
+              <option>Srbija</option>
+              <option>Ostalo</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="poruka">Poruka</label>
+            <textarea id="poruka" placeholder="Upišite poruku..."></textarea>
+          </div>
+
+          <div class="group">
+            <div class="group-title">Newsletter</div>
+            <label class="inline">
+              <input type="checkbox" id="news">
+              <span>Želim primati newsletter</span>
+            </label>
+          </div>
+
+          <div class="group">
+            <div class="group-title">Način dostave</div>
+            <div class="inline">
+              <label>
+                <input type="radio" name="dostava" value="email" checked>
+                <span>E-mail</span>
+              </label>
+
+              <label>
+                <input type="radio" name="dostava" value="posta">
+                <span>Pošta</span>
+              </label>
+
+              <label>
+                <input type="radio" name="dostava" value="osobno">
+                <span>Osobno</span>
+              </label>
+            </div>
+          </div>
+
+          <div>
+            <label for="promo">Promo kod (disabled primjer)</label>
+            <input id="promo" type="text" placeholder="Trenutno nedostupno" disabled>
+          </div>
+
+          <div class="actions">
+            <button type="submit">Pošalji</button>
+            <button type="reset">Obriši</button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <footer>
+      &copy; Dominik Perisa
+    </footer>
+  </div>
+</body>
+</html>
