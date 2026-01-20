@@ -1,0 +1,488 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+}
+
+.page {
+  width: min(900px, 95%);
+  margin: 20px auto;
+}
+
+header {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.banner img {
+  width: 100%;
+  display: block;
+  border-bottom: 4px solid #ffcc00;
+}
+
+/* NAV */
+nav {
+  background: #333;
+  margin-top: 10px;
+  padding: 8px;
+  text-align: center;
+}
+
+nav ul { list-style: none; }
+nav li { display: inline-block; margin: 0 6px; }
+
+/* selektor atributa: svi linkovi koji imaju href */
+nav a[href] {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 4px 12px;
+  font-size: 13px;
+  outline: none;
+}
+
+/* pseudo-klase za linkove */
+nav a:visited { color: #e6e6e6; }
+nav a:hover { background: rgba(255,255,255,0.15); }
+nav a:focus {
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.35);
+}
+nav a:active { transform: scale(0.97); }
+
+/* selektor atributa: link koji se otvara u novom tabu */
+nav a[target="_blank"] {
+  border-color: #ffcc00;
+}
+
+/* MAIN */
+main {
+  background: #fff;
+  border: 1px solid #ccc;
+  margin-top: 15px;
+  padding: 12px;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin: 12px 0 20px;
+}
+
+/* ---- Kontakt forma (iz vježbe 15, ostaje) ---- */
+.form-title { font-size: 18px; margin-bottom: 6px; }
+.form-desc { font-size: 12px; color: #555; margin-bottom: 12px; }
+
+.form-grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+
+label { display: block; font-size: 12px; font-weight: bold; margin-bottom: 4px; }
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  font-size: 13px;
+  background: #fff;
+}
+
+textarea { min-height: 90px; resize: vertical; }
+
+.group { border: 1px solid #e1e1e1; border-radius: 6px; padding: 10px; }
+.group-title { font-weight: bold; font-size: 12px; margin-bottom: 8px; }
+
+.inline { display: flex; gap: 14px; flex-wrap: wrap; }
+.inline label { font-weight: normal; margin: 0; }
+
+.actions { display: flex; gap: 10px; margin-top: 10px; }
+
+button {
+  padding: 8px 14px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+}
+button[type="reset"] { background: white; color: #333; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0b47ff;
+  box-shadow: 0 0 0 3px rgba(11, 71, 255, 0.15);
+}
+input[type="checkbox"]:checked + span,
+input[type="radio"]:checked + span { font-weight: bold; color: #0b47ff; }
+input:disabled, select:disabled, textarea:disabled { background: #e9e9e9; color: #777; }
+input:enabled, select:enabled, textarea:enabled { background: #fff; }
+
+/* ---- GALERIJA (vježba 16) ---- */
+
+/* ============================
+   GALERIJA SLIKA – VJEŽBA 18
+   ============================ */
+
+.lego-gallery {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.lego-gallery h2 {
+  margin-bottom: 8px;
+}
+
+.lego-gallery p {
+  margin-bottom: 24px;
+  color: #555;
+}
+
+.lego-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  margin: 0;
+  background: #fafafa;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  display: block;
+}
+
+.gallery-item figcaption {
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  background: #fff;
+}
+
+.gallery-item[data-set="city"] {
+  border-color: #2f80ed;
+}
+
+.gallery-item[data-set="technic"] {
+  border-color: #f2994a;
+}
+
+.gallery-item[data-set="friends"] {
+  border-color: #eb4aa5;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.15);
+  border-color: #000;
+}
+
+/* =========================
+   0) PALETA + FONTOVI
+   ========================= */
+
+:root{
+  --bg: #f0f0f0;
+  --text: #222222;
+  --muted: #555555;
+
+  --white: #ffffff;
+  --border: #cccccc;
+
+  --primary: #0b47ff;     /* plava */
+  --primary-dark: #0836c2;
+  --secondary: #ffcc00;   /* zuta */
+}
+
+body{
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Naslovi (pokrije h1/h2 i tvoje nazive iz upute) */
+h1, h2, h3,
+.section-header h1,
+.section-title,
+.lego-contact h2,
+.lego-gallery h2{
+  font-family: "Lobster", Georgia, serif;
+  letter-spacing: 0.4px;
+}
+
+/* =========================
+   1) OPĆE "KARTICE"
+   ========================= */
+
+.page{
+  width: min(900px, 95%);
+  margin: 20px auto;
+}
+
+header, main, footer{
+  border-radius: 10px;
+}
+
+header{
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+main{
+  background: var(--white);
+  border: 1px solid var(--border);
+  margin-top: 16px;
+  padding: 16px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+footer{
+  text-align: center;
+  font-size: 12px;
+  color: var(--muted);
+  margin: 12px 0 20px;
+}
+
+/* Banner */
+.banner img{
+  width: 100%;
+  display: block;
+  border-bottom: 4px solid var(--secondary);
+  border-radius: 8px;
+}
+
+/* =========================
+   2) NAVIGACIJA + LINKOVI
+   ========================= */
+
+nav{
+  background: #333333;
+  margin-top: 12px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+nav ul{ list-style: none; }
+nav li{ display: inline-block; margin: 0 6px; }
+
+/* atribut selektor: svi linkovi koji imaju href */
+nav a[href]{
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.85);
+  padding: 6px 14px;
+  font-size: 13px;
+  border-radius: 6px;
+  transition: transform .12s ease, background .12s ease, box-shadow .12s ease;
+}
+
+/* pseudo klase linkova */
+nav a:visited{ color: #e9e9e9; }
+nav a:hover{
+  background: rgba(255,255,255,0.14);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+}
+nav a:focus{
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.35);
+}
+nav a:active{ transform: scale(0.97); }
+
+/* vanjski link */
+nav a[target="_blank"]{
+  border-color: var(--secondary);
+}
+
+/* =========================
+   3) INDEX – sekcije / kartice (ako postoje)
+   ========================= */
+
+/* Ako na indexu imaš #osnovan – kartica naglaska */
+#osnovan{
+  background-color: var(--white);
+  border: 2px solid var(--secondary);
+  padding: 12px 16px;
+  margin: 14px 0 16px;
+  border-radius: 8px;
+}
+
+/* Ako imaš .lego-link – da izgleda kao gumb */
+.lego-link{
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 10px 0;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 700;
+}
+.lego-link:hover{
+  background: rgba(11, 71, 255, 0.08);
+}
+
+/* Ako imaš box za sliku / image box */
+.image-box, .lego-slika{
+  border: 1px dashed var(--border);
+  padding: 10px;
+  border-radius: 10px;
+  margin: 12px 0;
+  background: #fafafa;
+}
+
+/* Ako imaš tablicu rasporeda */
+.raspored{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 12px;
+  font-size: 13px;
+}
+.raspored th{
+  background: #fff6c9;
+  border: 1px solid #d7d7d7;
+  padding: 8px;
+}
+.raspored td{
+  border: 1px solid #d7d7d7;
+  padding: 8px;
+  text-align: center;
+}
+.raspored tr:hover td{ background: #f8f8f8; }
+
+/* =========================
+   4) CONTACT – kontakt forma (kartica + polja + gumb)
+   ========================= */
+
+/* Ako imaš wrapper .lego-contact */
+.lego-contact{
+  background: var(--white);
+  border: 2px solid var(--secondary);
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* Ako koristiš .lego-form i .form-row */
+.lego-form .form-row{
+  margin-bottom: 12px;
+}
+
+/* Polja */
+.lego-form input,
+.lego-form select,
+.lego-form textarea{
+  width: 100%;
+  padding: 9px 10px;
+  border: 2px solid #d6d6d6;
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+/* focus (pseudo-klasa) */
+.lego-form input:focus,
+.lego-form select:focus,
+.lego-form textarea:focus{
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(11, 71, 255, 0.15);
+}
+
+/* gumb */
+.btn-send{
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--primary);
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background .12s ease, transform .12s ease, box-shadow .12s ease;
+}
+.btn-send:hover{
+  background: var(--primary-dark);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+.btn-send:active{ transform: scale(0.98); }
+
+/* =========================
+   5) GALLERY – galerija (okviri, padding/margin, hover)
+   ========================= */
+
+.lego-gallery{
+  background: var(--white);
+  border: 2px solid var(--border);
+  padding: 16px;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* Flex row (ako koristiš .gallery-row) */
+.lego-gallery .gallery-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+/* Slike */
+.lego-gallery img{
+  width: calc((100% - 24px) / 3);
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  padding: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+/* selektor atributa: samo .jpg */
+.lego-gallery img[src$=".jpg"]{
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+/* boje po data-set atributu */
+.lego-gallery img[data-set="city"]{ border-color: #2b78ff; }
+.lego-gallery img[data-set="technic"]{ border-color: #ff9f1a; }
+.lego-gallery img[data-set="friends"]{ border-color: #ff4db8; }
+
+/* hover */
+.lego-gallery img:hover{
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.14);
+}
+
+/* responsive */
+@media (max-width: 700px){
+  .lego-gallery img{ width: calc((100% - 12px) / 2); }
+}
+@media (max-width: 450px){
+  .lego-gallery img{ width: 100%; }
+}
+/* --- FIX za galeriju (override starog CSS-a) --- */
+.gallery-item img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+}
